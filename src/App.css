@@ -1,0 +1,53 @@
+/* Menu bar container */
+.menu-bar {
+  display: flex;
+  background: linear-gradient(90deg, #4b6cb7, #182848);
+  /* gradient background */
+  padding: 12px 30px;
+  justify-content: flex-start;
+  gap: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  /* subtle shadow */
+  border-radius: 8px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Links inside the menu */
+.menu-bar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect with underline animation */
+.menu-bar a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffdd57;
+  /* bright underline color */
+  transition: width 0.3s ease;
+}
+
+.menu-bar a:hover::after {
+  width: 100%;
+}
+
+/* Hover background effect */
+.menu-bar a:hover {
+  color: #ffdd57;
+  /* change text color on hover */
+  transform: translateY(-2px);
+}
+
+/* Active link style */
+.menu-bar a.active {
+  color: #ffdd57;
+  font-weight: bold;
+}
